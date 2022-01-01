@@ -10,10 +10,10 @@ class SampleItemDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Item Details'),
+        title: const Text('Bachelor in Design (B.Des) (10+2 Any stream)'),
       ),
       body: const Center(
-        child: Text('More Information Here'),
+        child: Text('What is B.Des all about ?'),
       ),
     );
   }
