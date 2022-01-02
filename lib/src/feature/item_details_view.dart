@@ -6,9 +6,13 @@ class SampleItemDetailsView extends StatelessWidget {
 
   static const routeName = '/sample_item';
   final String nlTopic = 'Bachelor in Design (B.Des) (10+2 Any stream)';
-  final nlBody = [
+  final newsletterContent = [
     'What is B.Des all about ?',
-    '• It is 4 years undergraduate designing degree...'
+    """
+    • It is 4 years undergraduate designing degree.... 
+    • It is 4 years undergraduate designing degree....
+    • It is 4 years undergraduate designing degree....
+    """
   ];
 
   @override
@@ -18,8 +22,7 @@ class SampleItemDetailsView extends StatelessWidget {
           title: Text(nlTopic),
         ),
         body: NewsletterTopicHeader(
-          headerText: nlBody[0],
-          bodyText: nlBody[1],
+          newsletterContent: newsletterContent,
         ));
   }
 }
@@ -27,11 +30,9 @@ class SampleItemDetailsView extends StatelessWidget {
 class NewsletterTopicHeader extends StatelessWidget {
   const NewsletterTopicHeader({
     Key? key,
-    required this.headerText,
-    required this.bodyText,
+    required this.newsletterContent,
   }) : super(key: key);
-  final String headerText;
-  final String bodyText;
+  final List newsletterContent;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class NewsletterTopicHeader extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            headerText,
+            newsletterContent[0],
             style: const TextStyle(
               fontWeight: FontWeight.bold,
               decoration: TextDecoration.underline,
@@ -47,7 +48,7 @@ class NewsletterTopicHeader extends StatelessWidget {
             ),
           ),
           Text(
-            bodyText,
+            newsletterContent[1],
             style: const TextStyle(
               fontSize: 16,
             ),
