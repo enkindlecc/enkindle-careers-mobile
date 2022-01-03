@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'newsletterHeader.dart';
+import 'newsletterBody.dart';
+
 /// Displays detailed information about a SampleItem.
+/// TODO: loop through newsletterContent to generate widget dynamically
+/// TODO: display complete newsletter content with static data
 class SampleItemDetailsView extends StatelessWidget {
   SampleItemDetailsView({Key? key}) : super(key: key);
 
@@ -18,40 +23,16 @@ class SampleItemDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(nlTopic),
-        ),
-        body: NewsletterTopicHeader(
-          newsletterContent: newsletterContent,
-        ));
-  }
-}
-
-class NewsletterTopicHeader extends StatelessWidget {
-  const NewsletterTopicHeader({
-    Key? key,
-    required this.newsletterContent,
-  }) : super(key: key);
-  final List newsletterContent;
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
+      appBar: AppBar(
+        title: Text(nlTopic),
+      ),
+      body: Column(
         children: [
-          Text(
-            newsletterContent[0],
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              decoration: TextDecoration.underline,
-              fontSize: 20,
-            ),
+          NewsletterHeader(
+            newsletterContent: newsletterContent,
           ),
-          Text(
-            newsletterContent[1],
-            style: const TextStyle(
-              fontSize: 16,
-            ),
+          NewsletterBody(
+            newsletterContent: newsletterContent,
           ),
         ],
       ),
