@@ -11,13 +11,23 @@ class SampleItemDetailsView extends StatelessWidget {
 
   static const routeName = '/sample_item';
   final String nlTopic = 'Bachelor in Design (B.Des) (10+2 Any stream)';
-  final newsletterContent = [
-    'What is B.Des all about ?',
-    """
-    • It is 4 years undergraduate designing degree.... 
-    • It is 4 years undergraduate designing degree....
-    • It is 4 years undergraduate designing degree....
-    """
+  var newsletterContent = [
+    {
+      'header': 'What is B.Des all about ?',
+      'body': """
+      • It is 4 years undergraduate designing degree.... 
+      • It is 4 years undergraduate designing degree....
+      • It is 4 years undergraduate designing degree....
+      """,
+    },
+    {
+      'header': 'What is B.Des all about ?',
+      'body': """
+      • It is 4 years undergraduate designing degree.... 
+      • It is 4 years undergraduate designing degree....
+      • It is 4 years undergraduate designing degree....
+      """,
+    },
   ];
 
   @override
@@ -29,10 +39,10 @@ class SampleItemDetailsView extends StatelessWidget {
       body: Column(
         children: [
           NewsletterHeader(
-            newsletterContent: newsletterContent,
+            newsletterHeader: newsletterContent[0]['header'].toString(),
           ),
           NewsletterBody(
-            newsletterContent: newsletterContent,
+            newsletterBody: newsletterContent[0]['body'].toString(),
           ),
         ],
       ),

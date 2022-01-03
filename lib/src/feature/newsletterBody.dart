@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class NewsletterBody extends StatelessWidget {
   const NewsletterBody({
     Key? key,
-    required this.newsletterContent,
+    required this.newsletterBody,
   }) : super(key: key);
-  final List newsletterContent;
+  final String newsletterBody;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class NewsletterBody extends StatelessWidget {
       width: double.infinity,
       // margin: const EdgeInsets.all(10),
       child: Text(
-        newsletterContent[1],
+        newsletterBody,
         style: const TextStyle(
           fontSize: 16,
         ),
