@@ -14,18 +14,68 @@ class PsychologyContents {
       """,
       },
       {
-        'header': 'What does Designers do?',
+        'header': 'What does they do?',
         'body': """
-      • Designers plan the structure of something before it is actually made.
-      • They help organizations to design their messages in a way so that are memorable and effective. 
-      • They  give actual pictures to the imaginations of the people. 
+      • Psychologists study human behavior, it is helpful in all fields - be it hiring right people, teaching, resolving conflicts, making decisions and helping with  mental problems
+      • They guide in time of problems like brain stress or mental health problems
+      • They also guide when one is confused about their own choices such as career or marriage or relations etc.
+        """,
+      },
+      {
+        'header': 'Eligibility Criteria:',
+        'body': """
+      10+2 with minimum 50% marks
       """,
       },
       {
-        'header': 'B.Des course Admission Process:',
+        'header': 'Courses / Degrees:',
         'body': """
-      • Eligibility Criteria: 10+2 with minimum 50% marks ,any stream
-      • Admission in College: Some institutes give admission based on 12th marks and some give based on  Entrance exam
+      • Offered as parts of Graduation degree in both Arts & Science
+      • 1-2 year specialization courses are also available (in clinical or guidance etc.), usually done post graduation
+      • A postgraduate diploma in guidance and counselling is offered by the NCERT (National Council of Educational Research and Training)
+      • Clinical psychology courses are also offered to MBBS students by medical colleges
+      • The IGNOU offers a certificate course in guidance (CIG). The duration of the course is 6 months to 2 years.
+      • Post graduation is recommended for good career
+      """,
+      },
+      {
+        'header': 'Skills required:',
+        'body': """
+      • Communication skills
+      • Managing students / Patients
+      • Empathy & Patience
+      """,
+      },
+      {
+        'header': 'Key subjects :',
+        'body': """
+      • Psychology
+      • Biology
+      • Statistics
+      • Communication skills
+      """,
+      },
+      {
+        'header': 'Famous Colleges:',
+        'body': """
+      • Lady Sri Ram College for Women, New Delhi 
+      • St. Xavier’s College, Mumbai 
+      • Christ University, Bengaluru 
+      • Presidency College, Chennai 
+      • Dayanand Anglo Vedic College, Chandigarh 
+      • Banaras Hindu University, Varanasi
+      """,
+      },
+      {
+        'header': 'Career options:',
+        'body': """
+      • Educational psychologist
+      • Clinical psychologist
+      • Occupational psychologist
+      • Forensic psychologist
+      • Counselling psychologist
+      • Sports psychologist
+      • Research
       """,
       },
     ]

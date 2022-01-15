@@ -17,13 +17,15 @@ class SampleItemDetailsView extends StatelessWidget {
     final title = newsletterContents['nlTopic'].toString();
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Column(
-        children: _listViewBuilder(newsletterContents),
-      ),
-    );
+        appBar: AppBar(
+          title: Text(title),
+        ),
+        body: SingleChildScrollView(
+          physics: const ScrollPhysics(),
+          child: Column(
+            children: _listViewBuilder(newsletterContents),
+          ),
+        ));
   }
 
   List<Widget> _listViewBuilder(newsletterContents) {
