@@ -4,45 +4,21 @@ import 'newsletterHeader.dart';
 import 'newsletterBody.dart';
 
 /// Displays detailed information about a SampleItem.
-/// TODO: keep static data in separate json files
-/// TODO: display complete newsletter content with static data
+/// TODO: fix all warnings...
 class SampleItemDetailsView extends StatelessWidget {
-  SampleItemDetailsView({Key? key}) : super(key: key);
+  const SampleItemDetailsView({Key? key}) : super(key: key);
 
-  static const routeName = '/sample_item';
-  final String nlTopic = 'Bachelor in Design (B.Des) (10+2 Any stream)';
-  var newsletterContents = [
-    {
-      'header': 'What is B.Des all about ?',
-      'body': """
-      • It is 4 years undergraduate designing degree.... 
-      • It is 4 years undergraduate designing degree....
-      • It is 4 years undergraduate designing degree....
-      """,
-    },
-    {
-      'header': '2. What is B.Des all about ?',
-      'body': """
-      • 2. It is 4 years undergraduate designing degree.... 
-      • It is 4 years undergraduate designing degree....
-      • It is 4 years undergraduate designing degree....
-      """,
-    },
-    {
-      'header': '2. What is B.Des all about ?',
-      'body': """
-      • 2. It is 4 years undergraduate designing degree.... 
-      • It is 4 years undergraduate designing degree....
-      • It is 4 years undergraduate designing degree....
-      """,
-    },
-  ];
+  static const routeName = '/newsletter';
 
   @override
   Widget build(BuildContext context) {
+    final newsletterContents =
+        ModalRoute.of(context)!.settings.arguments as Map<String, Object>;
+    final title = newsletterContents['nlTopic'].toString();
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(nlTopic),
+        title: Text(title),
       ),
       body: Column(
         children: _listViewBuilder(newsletterContents),
@@ -53,7 +29,7 @@ class SampleItemDetailsView extends StatelessWidget {
   List<Widget> _listViewBuilder(newsletterContents) {
     late List<Widget> listview = [];
 
-    for (var newsletterContent in newsletterContents) {
+    for (var newsletterContent in newsletterContents['contents']) {
       listview.add(NewsletterHeader(
         newsletterHeader: newsletterContent['header'],
       ));
